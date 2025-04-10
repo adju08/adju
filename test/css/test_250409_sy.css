@@ -25,6 +25,3 @@ body {
     letter-spacing: -0.03em;
     padding: 136px 0 15px 0;
 }
-/*wrapper에 속한 글자색이 전부 #ffffff면 wrapper에서 다뤄도 되는건지 아니면 웬만하면 건드리지 않는게 좋은지,
-about과 grow의 <h1>의 글자색,행간,자간,글자크기,굵기가 다 같다면 css에서 h1태그로 넣어도 되는건지,
-html에서 h1이 너무 많아지는 경우는 css에서 .class h1으로 다 개별적으로 속성을 넣어줘야하는지*/
