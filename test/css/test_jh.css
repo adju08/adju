@@ -1,0 +1,88 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body {
+    font-family: Pretendard, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.5em;
+    word-break: keep-all;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+li {
+    list-style: none;
+}
+strong {
+    font-weight: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+.sin {
+    height: 1000px;
+    color: #fff;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/jh-bg.png)
+}
+.sin .tit h1,
+.BUSINESS .tit p {
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+.sin .tit h1{
+    margin: 0 0 30px 0;
+    padding: 326px 0 0 0;
+}
+.BUSINESS {
+    margin: 152px 0 114px 0;
+}
+.BUSINESS .tit {
+    text-align: center;
+    margin: 0 0 46px 0;
+}
+.BUSINESS .tit h1 {
+    color: #21439c;
+    margin: 0 0 10px 0;
+}
+.BUSINESS .tit p {
+    font-size: 45px;
+}
+.BUSINESS .list {
+    margin: 50px 0 0 0;
+    text-align: center;
+}
+.BUSINESS .list ul {
+    display: flex;
+    justify-content: space-between
+}
+.BUSINESS .list ul li h2 {
+    margin: 29px 0 0 0;
+    font-weight: 700;
+    color: #21439c;
+    font-size: 25px;
+    line-height: normal;
+    margin: 0 0 16px 0;
+}
+.list .more a {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 15px 105px;
+    margin: 21px 0 0 0;
+}
