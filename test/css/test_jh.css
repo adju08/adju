@@ -72,13 +72,12 @@ a {
     display: flex;
     justify-content: space-between
 }
-.BUSINESS .list ul li h2 {
-    margin: 29px 0 0 0;
+.BUSINESS .list ul li .sub_tit {
     font-weight: 700;
     color: #21439c;
     font-size: 25px;
     line-height: normal;
-    margin: 0 0 16px 0;
+    margin: 29px 0 16px 0;
 }
 .list .more a {
     border: 1px solid #ccc;
