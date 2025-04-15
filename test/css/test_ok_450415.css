@@ -74,6 +74,10 @@ a {
 .news .list {
     margin: 19px 0 0 0;
 }
+.news .list ul {
+    display: flex;
+    justify-content: space-between;
+}
 .news .list ul li {
     width: 404px;
 }
@@ -86,12 +90,6 @@ a {
     border-radius: 20px;
     padding: 209px 19px 15px 19px;
     background-color: #b24949;
-}
-.news .list ul .line1,
-.news .list ul .line2
- {
-    display: flex;
-    justify-content: space-between;
 }
 .news .list ul .line2 {
     margin: 25px 0 0 0;
