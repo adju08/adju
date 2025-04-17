@@ -37,10 +37,12 @@ section .manu {
     justify-content: space-between;
 }
 
-section .manu .tit h1 {
+section .manu .tit h1,
+.esg h1 {
     color: #86cab6;
 }
-section .manu .tit .sub_tit {
+section .manu .tit .sub_tit,
+.esg .sub_tit {
     color: #1d1d1d;
     font-size: 50px;
     font-weight: 700;
@@ -95,4 +97,67 @@ section .box .m_nv .sub_tit {
 }
 section .box .m_nv span {
     color: #555;
+}
+.esg {
+    background-color: #f1f1f1;
+    margin: 93px 0 0 0;
+    padding: 111px 0 94px 0;
+}
+.esg ul {
+    display: flex;
+    justify-content: space-between
+}
+.esg ul li {
+    width: 404px;
+    height: 306px;
+    border-radius: 20px;
+    margin: 30px 0 0 0;
+    padding: 202px 0 0 43px;
+    color: #fff;
+}
+.esg ul li a {
+    display: block;
+}
+.esg ul .list1 {
+    background: url(../images/ESG-img.png) no-repeat center center /cover;
+}
+.esg ul .list2 {
+    background: url(../images/보고서-img.png) no-repeat center center / cover;
+}
+.esg ul .list3 {
+    background: url(../images/유통-img.png) no-repeat center center / cover;
+}
+.esg ul li a h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.ir {
+    background-color: #005b45;
+    padding: 112px 0 108px 0;
+    color: #fff;
+}
+.ir .inner {
+    height: 405px;
+    display: flex;
+    justify-content: space-between
+}
+.ir .inner .bx_l {
+    width: 832px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.ir .inner .bx_r ul li {
+    width: 404px;
+    height: 119px;
+    margin: 0 0 24px 0;
+    padding: 49px 0 0 88px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.ir .inner .bx_r ul li:last-child {
+    margin: 0;
+}
+.ir .inner .bx_r ul li a {
+    color: #1d1d1d;
+    font-size: 20px;
 }
