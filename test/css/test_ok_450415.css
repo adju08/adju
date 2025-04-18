@@ -74,14 +74,22 @@ a {
 .news .list {
     margin: 19px 0 0 0;
 }
-.news .list ul {
+.news .list .group ul {
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
 }
-.news .list ul li {
-    width: 404px;
+.news .list .group.ls1 {
+    margin: 0 0 24px 0;
 }
-.news .list ul li a {
+.news .list .group.ls1 ul li {
+    width: calc(25% - 18px);
+}
+.news .list .group.ls2 ul li {
+    width: calc(33.33% - 16px);
+}
+
+
+.news .list .group ul li a {
     display: block;
     font-size: 25px;
     font-weight: 700;
@@ -90,7 +98,7 @@ a {
     border-radius: 20px;
     padding: 209px 19px 15px 19px;
     background-color: #b24949;
-}
-.news .list ul .line2 {
-    margin: 25px 0 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
