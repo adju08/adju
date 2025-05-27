@@ -21,12 +21,26 @@ header .logo a {
     width: 263px;
     height: 37px;
 }
+
+header .util .search .search_open {
+    width: 45px;
+    height: 45px;
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.6667 30L17.1667 19.5C16.3333 20.1667 15.375 20.6944 14.2917 21.0833C13.2083 21.4722 12.0556 21.6667 10.8333 21.6667C7.80556 21.6667 5.24306 20.6181 3.14583 18.5208C1.04861 16.4236 0 13.8611 0 10.8333C0 7.80556 1.04861 5.24306 3.14583 3.14583C5.24306 1.04861 7.80556 0 10.8333 0C13.8611 0 16.4236 1.04861 18.5208 3.14583C20.6181 5.24306 21.6667 7.80556 21.6667 10.8333C21.6667 12.0556 21.4722 13.2083 21.0833 14.2917C20.6944 15.375 20.1667 16.3333 19.5 17.1667L30 27.6667L27.6667 30ZM10.8333 18.3333C12.9167 18.3333 14.6875 17.6042 16.1458 16.1458C17.6042 14.6875 18.3333 12.9167 18.3333 10.8333C18.3333 8.75 17.6042 6.97917 16.1458 5.52083C14.6875 4.0625 12.9167 3.33333 10.8333 3.33333C8.75 3.33333 6.97917 4.0625 5.52083 5.52083C4.0625 6.97917 3.33333 8.75 3.33333 10.8333C3.33333 12.9167 4.0625 14.6875 5.52083 16.1458C6.97917 17.6042 8.75 18.3333 10.8333 18.3333Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media screen and (min-width:1025px){
+/******************* 메뉴 pc형 *******************/
 header .gnb .gnb_open,
 header .gnb .gnb_close {
     display: none; /* 모바일에서만 보임 */
 }
 header .gnb .gnb_wrap ul.depth1 {
     display: flex; /* li를 좌우로 배치 */
+}
+header .gnb .gnb_wrap ul.depth1 > li {
+    position: relative; /* depth2 정렬의 기준 */
 }
 header .gnb .gnb_wrap ul.depth1 > li > a {
     display: block;
@@ -55,13 +69,46 @@ header .gnb .gnb_wrap ul.depth1 > li:has(ul.depth2) > a > span::after {
 header .gnb .gnb_wrap ul.depth1 > li ul.depth2 {
     display: none; /* 2차 메뉴 */
 }
-header .util .search .search_open {
-    width: 45px;
-    height: 45px;
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.6667 30L17.1667 19.5C16.3333 20.1667 15.375 20.6944 14.2917 21.0833C13.2083 21.4722 12.0556 21.6667 10.8333 21.6667C7.80556 21.6667 5.24306 20.6181 3.14583 18.5208C1.04861 16.4236 0 13.8611 0 10.8333C0 7.80556 1.04861 5.24306 3.14583 3.14583C5.24306 1.04861 7.80556 0 10.8333 0C13.8611 0 16.4236 1.04861 18.5208 3.14583C20.6181 5.24306 21.6667 7.80556 21.6667 10.8333C21.6667 12.0556 21.4722 13.2083 21.0833 14.2917C20.6944 15.375 20.1667 16.3333 19.5 17.1667L30 27.6667L27.6667 30ZM10.8333 18.3333C12.9167 18.3333 14.6875 17.6042 16.1458 16.1458C17.6042 14.6875 18.3333 12.9167 18.3333 10.8333C18.3333 8.75 17.6042 6.97917 16.1458 5.52083C14.6875 4.0625 12.9167 3.33333 10.8333 3.33333C8.75 3.33333 6.97917 4.0625 5.52083 5.52083C4.0625 6.97917 3.33333 8.75 3.33333 10.8333C3.33333 12.9167 4.0625 14.6875 5.52083 16.1458C6.97917 17.6042 8.75 18.3333 10.8333 18.3333Z' fill='white'/%3E%3C/svg%3E%0A");
-    background-repeat: no-repeat;
-    background-position: center center;
+header .gnb .gnb_wrap ul.depth1 > li.over ul.depth2 {
+    position: absolute; /* li를 기준으로 정렬 */
+    top: 89px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #FF794C;
+    border-radius: 45px;
+    color: #fff;
+    padding: 12px 52px 12px 40px;
+    display: flex;
+    gap: 38px;
+    display: none; /* 2차 메뉴 */
 }
+header .gnb .gnb_wrap ul.depth1 > li.over ul.depth2 > li > a {
+    display: block;
+    white-space: nowrap;
+}
+header .gnb .gnb_wrap ul.depth1 > li.over ul.depth2 > li > a:hover {
+    text-decoration: underline;
+    color: #fff;
+}
+
+/********************* 메뉴에 마우스 오버 **********************/
+header.menu_over {
+    color: #412D22;
+    background-color: #fff;
+}
+header.menu_over .logo a {
+    background-image: url(../images/logo_c.svg);
+}
+header.menu_over .util .search .search_open {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.6667 30L17.1667 19.5C16.3333 20.1667 15.375 20.6944 14.2917 21.0833C13.2083 21.4722 12.0556 21.6667 10.8333 21.6667C7.80556 21.6667 5.24306 20.6181 3.14583 18.5208C1.04861 16.4236 0 13.8611 0 10.8333C0 7.80556 1.04861 5.24306 3.14583 3.14583C5.24306 1.04861 7.80556 0 10.8333 0C13.8611 0 16.4236 1.04861 18.5208 3.14583C20.6181 5.24306 21.6667 7.80556 21.6667 10.8333C21.6667 12.0556 21.4722 13.2083 21.0833 14.2917C20.6944 15.375 20.1667 16.3333 19.5 17.1667L30 27.6667L27.6667 30ZM10.8333 18.3333C12.9167 18.3333 14.6875 17.6042 16.1458 16.1458C17.6042 14.6875 18.3333 12.9167 18.3333 10.8333C18.3333 8.75 17.6042 6.97917 16.1458 5.52083C14.6875 4.0625 12.9167 3.33333 10.8333 3.33333C8.75 3.33333 6.97917 4.0625 5.52083 5.52083C4.0625 6.97917 3.33333 8.75 3.33333 10.8333C3.33333 12.9167 4.0625 14.6875 5.52083 16.1458C6.97917 17.6042 8.75 18.3333 10.8333 18.3333Z' fill='%23412D22'/%3E%3C/svg%3E%0A");
+}
+header.menu_over .gnb .gnb_wrap ul.depth1 > li.over ul.depth2 {
+    display: block;
+}
+} /* @media */
+
+
+
 
 .visual .swiper-slide { /* swiper-slide에 flex나 넓이나 다른 걸 주지 않는 게 좋음 */
     color: #fff;
@@ -126,6 +173,9 @@ header .util .search .search_open {
     display: none; /* 정지버튼을 눌렀을 때만 나옴 */
     background-image: url("data:image/svg+xml,%3Csvg width='5' height='5' viewBox='0 0 5 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.7356 2.15007C4.79854 2.193 4.84571 2.24441 4.87711 2.3043C4.90858 2.36426 4.92432 2.4295 4.92432 2.50001C4.92432 2.57051 4.90858 2.63575 4.87711 2.69571C4.84571 2.7556 4.79854 2.80701 4.7356 2.84994L1.5291 4.89124C1.49449 4.91126 1.45813 4.92623 1.42001 4.93616C1.38197 4.94617 1.34565 4.95117 1.31105 4.95117C1.20021 4.95117 1.10338 4.9124 1.02058 4.83487C0.937694 4.75726 0.896254 4.65795 0.896254 4.53695L0.896254 0.463056C0.896254 0.342056 0.937772 0.242751 1.02081 0.16514C1.10384 0.0876052 1.20074 0.0488374 1.3115 0.0488374C1.34611 0.0488374 1.38239 0.0538414 1.42036 0.0638484C1.45832 0.0737789 1.49457 0.088751 1.5291 0.108765L4.7356 2.15007Z' fill='white'/%3E%3C/svg%3E%0A");
 }
+
+
+
 
 @media screen and (max-width:1024px){
             .visual .swiper-slide .wrapper {
